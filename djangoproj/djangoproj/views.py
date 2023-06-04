@@ -1,4 +1,9 @@
 from django.shortcuts import render
 
 def index(request):
-    return render(request,'index.html')
+    data = {
+    'id': 1234,
+    'product': "I Phone",
+    'description': '128GB storage 16GB RAm'
+    }
+    return render(request,'index.html',{'myObject': data})
